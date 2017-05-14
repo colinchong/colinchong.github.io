@@ -383,6 +383,7 @@ var pizzaElementGenerator = function(i) {
   pizzaImageContainer.appendChild(pizzaImage);
   pizzaContainer.appendChild(pizzaImageContainer);
 
+
   pizzaDescriptionContainer.style.width="65%";
 
   pizzaName = document.createElement("h4");
@@ -448,7 +449,7 @@ var resizePizzas = function(size) {
 
   // Iterates through pizza elements on the page and changes their widths
   function changePizzaSizes(size) {
-    // Selection of fixed pizza size based on slider position
+    // Determining width to be used for pizza sizing.
     switch(size) {
       case "1":
         newWidth = 25;
@@ -464,7 +465,7 @@ var resizePizzas = function(size) {
     }
     var randomPizzas = document.querySelectorAll(".randomPizzaContainer");
 
-    // Removed query for DOM elements outside of loop and using percent width to adjust pizza size
+    // Removed DOM queries out of the loop to improve speed. Using adjusted width percentage calculation.
     for (var i = 0; i < randomPizzas.length; i++) {
       randomPizzas[i].style.width = newWidth + "%";
     }
@@ -515,7 +516,7 @@ function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
 
-  // Replaced querySelectorAll() with getElementsByClassName to reduce unnecessarily large scope
+// Revmoed querySelectorAll() to use getElementsByClassName instead to reduce number of elements targeted
   var items = document.getElementsByClassName('.mover');
   for (var i = 0; i < items.length; i++) {
     var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
@@ -539,9 +540,9 @@ window.addEventListener('scroll', updatePositions);
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
-  // Calculating rows in browser window
+  // Calcuating rows on screen
   var rows = Math.ceil(window.innerHeight / s) + 1;
-  // Calcuating number of pizzas instead of static 200 count that was too large
+  // Replacing static 200 value to respond to number of pizzas on screen to reduce load time
   for (var i = 0; i < cols * rows; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';

@@ -17,7 +17,6 @@ This project is based on a Cameron Pittman's portfolio and pizzeria website.
 - Refactored “changePizzaSizes” function to remove forced synchronous layout, removing DOM queries out of the loop and setting size based on percent width.
 - Refactors DOMContentLoaded function to only load pizzas based on window size (actual columns and rows. Previously set statically to 200.
 - Replace querySelectorAll() that has too broad of a scope more efficient with getElementsByClassName
-- Minified main.js to reduce load time
 
 ### Running the project
 To run `index.html`, navigate your browser to [http://colinchong.github.io](http://colinchong.github.io).
