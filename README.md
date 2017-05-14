@@ -22,3 +22,10 @@ This project is based on a Cameron Pittman's portfolio and pizzeria website.
 To run `index.html`, navigate your browser to [http://colinchong.github.io](http://colinchong.github.io).
 
 From this page, use the last link for Cam's Pizzeria to view `pizza.html`.
+
+#### Running the project locally
+Optionally, to run this project locally, navigate to the [GitHub repo](https://github.com/colinchong/colinchong.github.io).
+
+From here, you can clone the repository with your choice of GitHub client or download the zip.
+
+Once downloaded to your local machine, open `index.html` in your browser.
