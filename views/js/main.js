@@ -464,7 +464,7 @@ var resizePizzas = function(size) {
         console.log("bug in sizeSwitcher");
     }
     // Changed querySelectorAll to getElementsByClassName to reduce number of targeted elements
-    var randomPizzas = document.getElementsByClassName(".randomPizzaContainer");
+    var randomPizzas = document.getElementsByClassName("randomPizzaContainer");
 
     // Removed DOM queries out of the loop to improve speed. Using adjusted width percentage calculation.
     for (var i = 0; i < randomPizzas.length; i++) {
@@ -547,9 +547,10 @@ document.addEventListener('DOMContentLoaded', function() {
   var s = 256;
   // Calcuating rows on screen
   var rows = Math.ceil(window.innerHeight / s) + 1;
+  //Removed elem definition outside loop
+  var elem = document.createElement('img');
   // Replacing static 200 value to respond to number of pizzas on screen to reduce load time
   for (var i = 0; i < cols * rows; i++) {
-    var elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
     elem.style.height = "100px";
