@@ -8,11 +8,11 @@
     <title>Cameron Pittman: Portfolio</title>
 
     <!-- Hmm, what is the impact of web fonts on speed? Measure it... -->
-    // Asynchronously loading of Google Font to load page faster
-    // Removal of 700 weight font as it is unused
+    <!-- Asynchronously loading of Google Font to load page faster
+    Removal of 700 weight font as it is unused -->
     <link rel="preload" href="//fonts.googleapis.com/css?family=Open+Sans:400" as="style">
 
-    // Inlined styles.css file to remove load from critical rendering path
+    <!-- Inlined styles.css file to remove load from critical rendering path -->
     <style>
     html {
       font-size: 100%;
@@ -64,10 +64,10 @@
       header p { padding-left: 4.5em;}
     }
     </style>
-    // Print related CSS taken off critical rendering path
+    <!-- Print related CSS taken off critical rendering path -->
     <link href="css/print.css" rel="stylesheet" media="print">
 
-    // Google Analytics tags now load asynchronously to free up critical rendering path
+    <!-- Google Analytics tags now load asynchronously to free up critical rendering path -->
     <script async>
       (function(w,g){w['GoogleAnalyticsObject']=g;
       w[g]=w[g]||function(){(w[g].q=w[g].q||[]).push(arguments)};w[g].l=1*new Date();})(window,'ga');
@@ -112,7 +112,7 @@
           </li>
 
           <li>
-            // Newly compressed, resized, and separate pizzeria image used
+            <!-- Newly compressed, resized, and separate pizzeria image used -->
             <img style="width: 100px;" src="img/pizzeria.jpg">
             <a href="views/pizza.html">Cam's Pizzeria</a>
             <p>Who wants a performant pizza?</p>
